@@ -1,44 +1,30 @@
-# Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
-
-title: "A reproducible benchmark of denoising strategies in resting-state fMRI connectivity using fMRIPrep and Nilearn"
-author: Hao-Ting Wang, Steven L Meisler, Hanad Sharmarke, Natasha Clarke, Nicolas Gensollen, Christopher J Markiewicz, François Paugam, Bertrand Thirion, Pierre Bellec
-copyright: "2023"
-logo: logo.png
-only_build_toc_files: true
-
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
+author: "Hao-Ting Wang, Steven L Meisler, Hanad Sharmarke, Natasha Clarke, Nicolas\
+  \ Gensollen, Christopher J Markiewicz, Fran\xE7ois Paugam, Bertrand Thirion, Pierre\
+  \ Bellec"
+bibtex_bibfiles:
+- references.bib
+copyright: '2023'
 execute:
   execute_notebooks: force
   timeout: -1
-
-# Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
-
-# Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
-sphinx:
-  config:
-    bibtex_reference_style: author_year
-
-# Information about where the book exists on the web
-repository:
-  url: https://github.com/SIMEXP/fmriprep-denoise-benchmark  # Online location of your book
-  path_to_book: content  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
-
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: false
   use_repository_button: true
-  # announcement: "⚠️This is a working draft for discussion and feedback!⚠️"
-
+latex:
+  latex_documents:
+    targetname: book.tex
 launch_buttons:
-  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url             : https://test.conp.cloud   # The URL of the Neurolibre BinderHub
-  thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
+  binderhub_url: https://binder-mcgill.conp.cloud
+  notebook_interface: classic
+  thebe: false
+logo: logo.png
+only_build_toc_files: true
+repository:
+  branch: main
+  path_to_book: content
+  url: https://github.com/roboneurolibre/fmriprep-denoise-benchmark
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+title: A reproducible benchmark of denoising strategies in resting-state fMRI connectivity
+  using fMRIPrep and Nilearn
